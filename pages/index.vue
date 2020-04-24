@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto pt-6 px-4">
+  <div class="container mx-auto pt-6 px-4 max-w-lg">
     <gender />
     <height />
     <ageweight />
