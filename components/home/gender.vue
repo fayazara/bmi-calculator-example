@@ -1,10 +1,14 @@
 <template>
   <section class="grid grid-cols-2 gap-2 mb-6">
-    <div class="rounded-md shadow-md bg-gray-800 p-4 w-full">
+    <div
+      class="rounded-md bg-gray-800 p-4 w-full transition-all duration-300 cursor-pointer"
+      @click="toggle('male')"
+      :class="gender == 'male' ? null : 'opacity-25 shadow-md'"
+    >
       <svg
         class="w-16 h-16 mx-auto"
-        fill="currentColor"
-        stroke="currentColor"
+        fill="#fff"
+        stroke="#fff"
         viewBox="0 0 384 384"
       >
         <path
@@ -13,11 +17,15 @@
       </svg>
       <p class="text-center mt-8 uppercase font-bold">male</p>
     </div>
-    <div class="rounded-md bg-gray-800 p-4 w-full opacity-50">
+    <div
+      class="rounded-md bg-gray-800 p-4 w-full transition-all duration-300 cursor-pointer"
+      @click="toggle('female')"
+      :class="gender == 'female' ? null : 'opacity-25 shadow-md'"
+    >
       <svg
         class="w-16 h-16 mx-auto"
-        fill="currentColor"
-        stroke="currentColor"
+        fill="#fff"
+        stroke="#fff"
         viewBox="-56 0 384 384"
       >
         <path
@@ -30,7 +38,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      gender: "male"
+    };
+  },
+  methods: {
+    toggle(val) {
+      this.gender = val;
+      this.$emit("genderListener", val);
+    }
+  }
+};
 </script>
-
-<style></style>

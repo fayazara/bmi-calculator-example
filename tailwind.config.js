@@ -6,6 +6,11 @@
 */
 module.exports = {
   theme: {
+    extend: {
+      colors: {
+        superpink: "#e24353"
+      }
+    },
     fontFamily: {
       sans: [
         'Product Sans',

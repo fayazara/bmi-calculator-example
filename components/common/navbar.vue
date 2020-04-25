@@ -1,11 +1,7 @@
 <template>
   <div class="shadow-lg py-6 px-4 flex items-center">
     <div>
-      <svg
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
         stroke-width="2"
         viewBox="0 0 24 24"
         class="w-8 h-8"
